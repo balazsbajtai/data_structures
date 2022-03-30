@@ -174,23 +174,3 @@ def build_tree_from_list(numbers_list):
             binary_tree.insert(numbers_list[i])
 
         return binary_tree
-
-
-if __name__ == '__main__':
-    nl = [12, 4, 25, 9, 17, 21, 3, 10, 19, 6, 30]
-    nl = [15, 12, 27, 7, 14, 20, 88, 23]
-
-    print('Original tree:')
-    bt = build_tree_from_list(nl)
-    bt.print_binary_tree()
-
-    print('\nDFS - In Order Traversal: {}'.format(bt.in_order_traversal()))
-    print('DFS - Pre Order Traversal: {}'.format(bt.pre_order_traversal()))
-    print('DFS - Post Order Traversal: {}'.format(bt.post_order_traversal()))
-
-    print('\nDelete 12 from tree:')
-    bt.delete(12)
-    bt.print_binary_tree()
-
-    print('\nSearching for 9: {}'.format(bt.search(9)))
-    print('Searching for 15: {}'.format(bt.search(15)))
